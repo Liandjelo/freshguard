@@ -40,6 +40,9 @@ const checkUid = (uid, email) => {
         return null;
     }
 };
+app.get("/", (req, res) => {
+    res.send("Hello World! This is a sample web server.");
+});
 
 app.post("/good-api", (req, res) => {
     const { email, path: userPath, uid } = req.body;
